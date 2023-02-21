@@ -122,14 +122,10 @@ Describe why you included the table and what information it reveals
 
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("Chart_1.R")}
 ```
+
+In this plot, we are looking at Blood Glucose measured in mmol/L. This is a modified scatter plot where areas of higher trends of a certain glucose measurement will have a bigger point than others. We can see in our graph that high risk individuals tend to have blood glucose over 15. Low risk people are more concentrated at the 5-7 range while mid risk as some inidviduals in the lower range but also has a higher spread into the high glucose range.
 
 ### Chart 2 : Risk Level Quantities
 

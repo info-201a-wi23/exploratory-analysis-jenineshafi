@@ -114,32 +114,12 @@ Our findings reveal that
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
 In our analysis, we found that...
-```{r summary info, echo=FALSE, message=FALSE}
-source("~/Documents/INFO201/exploratory-analysis-jenineshafi/Summary Information.R")
+```{r, echo=FALSE, message=FALSE, code = readLines("Summary Information.R")}
+
 ```
 
-### Table: 
-```{r aggregated table, echo=FALSE, message= FALSE}
-source("~/Documents/INFO201/exploratory-analysis-jenineshafi/Aggregated Table.R")
-maternal_df <- maternal_risk %>%
-  select("RiskLevel", "Age", "BS", "HeartRate", "BodyTemp") %>%
-  group_by(RiskLevel) %>%
-  summarize(min_Age = min(Age),
-            max_Age = max(Age),
-            avg_age = mean(Age),
-            avg_BS = mean(BS),
-            avg_HeartRate = mean(HeartRate),
-            avg_BodyTemp = mean(BodyTemp)) %>%
- arrange(factor(RiskLevel, levels = c("high risk", "mid risk", "low risk")))
-kable(maternal_df, col.names = 
-        c('Risk Levels',
-          'Min Age',
-         'Max Age',
-         'Mean Age',
-         'Mean Blood Sugar',
-         'Mean Heart Rate',
-         "Mean Body Temp")) %>%
-kable_styling(bootstrap_options = c("bordered", full_width = F))   
+### Aggregate Table : 
+```{r, echo=FALSE, message=FALSE, code = readLines("Aggregated Table.R")}
 
 ```
 
@@ -147,10 +127,10 @@ kable_styling(bootstrap_options = c("bordered", full_width = F))
 
 Describe why you included the table and what information it reveals
 
-### Chart 1
+### Chart 1 : Blood Glucose Levels across Risk Level Groups
 
-```{r, echo = FALSE}
-Chart_1
+```{r, echo = FALSE, message=FALSE, code = readLines("Chart_1.R")}
+
 ```
 
 In this plot, we are looking at Blood Glucose measured in mmol/L. This is a modified scatter plot where areas of higher trends of a certain glucose measurement will have a bigger point than others. We can see in our graph that high risk individuals tend to have blood glucose over 15. Low risk people are more concentrated at the 5-7 range while mid risk as some inidviduals in the lower range but also has a higher spread into the high glucose range. This information shows how glucose is represented in each risk group.
@@ -160,27 +140,14 @@ In this plot, we are looking at Blood Glucose measured in mmol/L. This is a modi
 The bar graph counts how many inputs there are in each category per risk level. There are 272 cases of high risk, 336 cases of mid risk and 406 cases of low risk. This information is valuable as it tells us the varying states of risk level in the population they acquired the data from. This gives us insight on the diversity of the population as well as provide insight on potential correlations there are between other factors and an individual's risk level. This information can be analyzed and correct treatment based on these factors can be administered. It is a good way to obtain context. 
 
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
-library(dplyr)
-library(ggplot2)
-#Loading in the data set
-maternal_risk <- read.csv("Maternal Health Risk Data Set (1).csv", stringsAsFactors = F)
-
-#Plotting how many inputs there were for each RiskLevel: low, mid, and high risk
-ggplot(maternal_risk, aes (x=RiskLevel))+ geom_bar()
-
-#Confirming numbers by referencing the dataset
-num_high_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "high risk") 
-
-num_mid_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "mid risk")
-
-num_low_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "low risk")
+```{r, echo=FALSE, message=FALSE, code = readLines("chart2_num_per_risklevel.R")}
 
 ```
 
 ### Chart 3: Age Distribution within each Risk Level Group 
 
-``
+```{r, echo = FALSE, message=FALSE, code = readLines("chart_3_age_risk.R")}
+
 ```
 
 Describe why you chose this chart and what information it reveals

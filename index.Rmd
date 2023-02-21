@@ -56,7 +56,7 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 
 ### Table: 
 ```{r aggregated table, echo=FALSE, message= FALSE}
-source("~/INFO201/Summary Information.R")
+source("~/Documents/INFO201/exploratory-analysis-jenineshafi/Aggregated Table.R")
 maternal_df <- maternal_risk %>%
   select("RiskLevel", "Age", "BS", "HeartRate", "BodyTemp") %>%
   group_by(RiskLevel) %>%
@@ -72,10 +72,10 @@ kable(maternal_df, col.names =
           'Min Age',
          'Max Age',
          'Mean Age',
-         'Blood Sugar',
-         'Heart Rate',
-         "Body Temp")) %>%
-kable_styling(bootstrap_options = c("bordered", full_width = F)) 
+         'Mean Blood Sugar',
+         'Mean Heart Rate',
+         "Mean Body Temp")) %>%
+kable_styling(bootstrap_options = c("bordered", full_width = F))   
 
 ```
 

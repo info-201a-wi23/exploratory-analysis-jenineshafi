@@ -26,11 +26,10 @@ kable(maternal_df, col.names =
           'Min Age',
           'Max Age',
           'Mean Age',
-          'Blood Sugar',
-          'Heart Rate',
-          "Body Temp")) %>%
-  kable_styling(bootstrap_options = c("bordered", full_width = F)) 
-
+          'Mean Blood Sugar',
+          'Mean Heart Rate',
+          "Mean Body Temp")) %>%
+  kable_styling(bootstrap_options = c("bordered", full_width = F))   
 
 
 

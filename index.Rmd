@@ -144,8 +144,8 @@ kable_styling(bootstrap_options = c("bordered", full_width = F))
 ```
 
 
+This table presents how average health factors and age can contribute to different risk levels
 
-Describe why you included the table and what information it reveals
 
 ### Chart 1
 

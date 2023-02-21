@@ -3,13 +3,12 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
-## Project title
+## Assessing Maternal Health Risk among Bangladeshi Women 
 
-Give your project a concise, interesting title that summarizes the entirety of your project
 
 ### Authors
 
-Names of your team members
+Jenine Shafi, Iris Hamilton, Amy Ho, and Sam Kaing
 
 ### Date
 
@@ -17,43 +16,103 @@ Winter 2022
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+The main question we are examining is: what factors contribute to maternal health risk among reproductive-aged women living in rural Bangladesh? We believe this question has important implications for potential policy and health care around improving maternal health and preventing maternal mortality. To explore this question, we intend to analyze a data set that includes several health measures of Bangladeshi women that relate to maternal health.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+health; maternal health; maternal mortality; pregnancy; Bangladesh
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+> Women of reproductive age in developing countries of rural areas like Bangladesh lack access to adequate healthcare, maternal services, social and economic factors, ultimately putting their lives and health at risk from a wide range of potential complications during pregnancy. Understanding how to foresee perceived risks to pregnant women in Bangladesh is essential for enhancing maternal health outcomes and decreasing maternal mortality. Predicting the risks that women in Bangladesh face in regard to their maternal health allows providers to take measures to lessen the possibility of any difficulties developing. Maternal health risk data collection from various hospitals, community clinics, and maternal health cares through Internet of Things (IoT) have revealed health factors as possible indicators for maternal health risks. Constant vigilance during pregnancy is required to ensure a risk-free pregnancy and birth. Hence, IoT based healthcare systems can be used by providers to consistently monitor the health of the mother and fetus. How does blood glucose/gestational diabetes affect the overall maternal health?
+Pre-eclampsia and gestational diabetes, for instance, can be diagnosed by monitoring the mother’s vital signs, movements, and symptoms with IoT devices. Both maternal health risks and mortality occur under these circumstances and lead to maternal, fetal, and long-term health complications. Do the categories of maternal risk correlate with each other? What factors contribute to a “high-risk” profile? These challenges need to be addressed to improve maternal health outcomes of Bangladeshi women alongside efforts of providing access to prenatal services, education, and resources to those living in rural areas. 
+
+</br> Adjust the research questions depending on our final graph 
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+> In our project, we will be analyzing health statistics in relation to maternal health risks. The data looked at five categories: age, body temperature, blood pressure, blood glucose, and heart rate. The data we are looking at comes from a cloud of Bangladesh data where researchers tested the accuracy of machine learning. They categorized each individual’s health risk using parameters to define what is deemed a healthy range and determined that python-based decision tree gave the best accuracy at 97% (Ahmed & Kashem) One of the most important risks that they identified was diabetes (Ahmed, Marzia, et al.) There are three types of diabetes that a woman can have. Type I and Type II usually occur before pregnancy (McCance et al.) while gestational diabetes occurs during pregnancy. If the mother is unable to metabolize sugar after the pregnancy, then it develops into Type II diabetes. Gestational diabetes in particular has a higher chance of fetal fatness, caesarean delivery, and clinical neonatal hypoglycemia. The fetus can also have complications in life including childhood obesity, trouble regulating blood glucose, and hypertension (Saravanan et al.) Hypertension itself can be caused by many factors, but a common one is stress. Outside of pregnancy, hypertension could lead to cardiovascular disease and stroke. During pregnancy and the birthing process, hypertension could lead to premature birth and pre-eclampsia (Saravanan et al.) Maternal health risks are a problem by causing chronic illness to the mother and the fetus, along with complications during the birthing process. By examining data and determining risk, we can infer which individuals are most at risk for complications later in life.
+
+</br>
+
+**Bibliography in MLA format:**
+
+Ahmed, Marzia, and Kashem, Mohammod Abul. “IOT Based Risk Level Prediction Model for Maternal Health Care in the Context of Bangladesh.” 2020 2nd International Conference on Sustainable Technologies for Industry 4.0 (STI), 2020, https://doi.org/10.1109/sti50764.2020.9350320.
+
+> This was the first dataset that Ahmed attempt to assess risk for maternal health. Using the data she and others explain the models and trees they used to determine what was the best model and what could have been improved.
+
+Ahmed, Marzia, et al. “Review and Analysis of Risk Factor of Maternal Health in Remote Area Using the Internet of Things (IOT).” Lecture Notes in Electrical Engineering, 2020, pp. 357–365, https://doi.org/10.1007/978-981-15-2317-5_30.
+
+> This is the second study that Ahmed used for in diabetes machine learning. This time she used pre-collected data of Pima Indians statistics to test for the best accuracy of machine learning.
+
+McCance, D.R., et al. “Pregnancy and Diabetes.” Best Practice & Research Clinical Endocrinology & Metabolism, Baillière Tindall, 22 Nov. 2011, https://www.sciencedirect.com/science/article/pii/S1521690X11000856.
+
+> This a journal written about trends of seeing diabetes in pregnancy and how women can prepare themselves during pregnancy. It also goes in-depth of explaining what could happen if diabetes is left untreated.
+
+Saravanan, Ponnusamy, et al. “Gestational Diabetes: Opportunities for Improving Maternal and Child Health.” The Lancet Diabetes & Endocrinology, vol. 8, no. 9, 2020, pp. 793–800., https://doi.org/10.1016/s2213-8587(20)30161-3.
+
+> This journal focuses more on gestational diabetes which is a type of diabetes that contracted during pregnancy. The article lists the complications that could happen to both the mother and the fetus, and urges to change the perception that gestational diabetes only about fat babies and move torwards the findings of long term effects of gestational diabetes, one of which was hypertension.
+
+</br>
+
+With these articles in mind, we will demonstrate the weight of health issues that ties in with maternal deaths. Using data to support the seriousness of a condition, we will evaluate the parameters of a person's risk for life complications following the data Ahmed et al. used to evaluate risk.
+
+</br>
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+Where did you find the data? Please include a link to the data source. 
+
+> The dataset was found on the website Kaggle, which included additional supporting sources for the dataset.
+Link to the data source: https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data?resource=download
+
+Who collected the data? 
+
+> The University of California, Irvine (UCI) collected this data.
+
+How was the data collected or generated? 
+
+> A UCI research team collected this data from 6 different hospitals, community clinics, maternal health cares that were included in the Internet of Things (IoT) based risk monitoring system. The hospitals observed were Maternity Clinic, Kurmitola General Hospital, Aichi medical college and hospital, Uttara Adhunik Medical College Hospital, East-West Medical College and Hospital, and CARe Medical College and Hospital. 
+
+Why was the data collected? 
+
+> The data was collected because researchers wanted to know what health conditions were indications for high risk during pregnancy. They used IoT to identify and administer care to women living in rural areas. If successful, this would allow practitioners to identify risks and provide care remotely.
+
+How many observations (rows) are in your data? 
+
+> There are 1,014 observations in this data set. 
+
+How many features (columns) are in the data? 
+
+> There are 7 features in this data set, including: age, systolic blood pressure, diastolic blood pressure, body temperature, heart tate, and risk level. 
+
+What, if any, ethical questions or questions of power do you need to consider when working with this data? 
+
+> Some ethical questions and questions of power we consider is being aware of the fact that UCI is a Western institution, meaning it is important to question if UCI's motivation for collecting the data were completely benevolent. Additionally, because this research was in relation to human beings, we need to question if the study was done in an ethical manner, where informed consent was practiced throughout the entire research process. Also, we question if the research team at UCI was closely involved with other researchers or health practitioners that live in Bangladesh and have a strong familiarity with the culture to make sure that every aspect of the research process was done in a way that felt non-invasive for the Bangladeshi communities being studied. Another question of power is that if there was a relationship between UCI and the Bangladeshi staff, was this relationship ongoing and did the Bangladeshi institutions have the space and power to give continuous input and insight into the project. In relation to the context in which the data was taken, we also wonder if treatments or preventative measures are in place in the rural Bangladeshi communities, if they are accessible, and if the UCI research team made significant efforts to help support the improvement of health of this rural population after they took data. 
+
+What are possible limitations or problems with this data?   
+
+> One limitation is that, without the help of supporting papers, the data set itself does not explain what high, mid and low risk mean. These levels are all subjective and may be misinterpreted as everyone has a different understanding on what the word “risk” means. What are they at risk for? This question is not answered when only looking at the numbers reported. Upon reviewing the data source, it can be learned that the risk is predicting maternal mortality. Another possible limitation is the conclusion of high risk only based on a few data points: blood glucose levels, age, blood pressure, body temperature, and heart rate. There are environmental factors that play a role in a woman's health that varies by location. Pollution, water quality, and food security play a role in a woman's health, but these points are not recorded. Genetic factors that could impact a women’s risk level are also not included in this data set which negates their importance. An individual’s risk could be directly related to genetics and inheritance and testing an individual's heart rate or blood pressure may not indicate that. Although IoT is helpful in providing some support in care, it is not indicative of an individual's entire condition as the data that is collected may not be entirely sufficient.     
+
+</br>
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+> The results of our project primarily have implications for public health practitioners, medical professionals, and policymakers. According to the data source, the health metrics included in this dataset (age, systolic blood pressure, diastolic blood pressure, body temperature, heart rate) are considered significant risk factors for maternal mortality. Therefore, the conclusions of our project can help guide areas of focus that can improve maternal health outcomes. For example, this data set focuses on women in rural areas where there may be decreased access to medications or medical care to help reduce the pregnancy complications that result from chronic diseases, therefore policymakers and medical professionals may band together to increase the number of medical personnel or health programs in these areas to help improve pregnancy outcomes and maternal health. Furthermore, we can use the machine learning model to identify individuals at the most risk of maternal death or pregnancy complications in order to guide public health practitioners and policymakers to direct proper resources to help these populations improve their own health and the health of their children.   
+
+</br>
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+
+> One major limitation of our project is that the dataset we chose only contains data of maternal health risks for women living in rural Bangladesh. Due to how specific the data is, our conclusions may not be applicable or generalizable to other populations. Another limitation of this dataset is that, although there is data for a significant number of women, there was not much data collected for each woman. It is difficult to get a comprehensive view of maternal health since there are only four health metrics included in this data set. In addition, there would likely be more potential research questions to formulate if there were more sociodemographic data included. For example, if we had data related to more structural factors, such as housing, education, income status, we may have been able to examine if there are some underlying inequities that might be associated with higher maternal health risk.   
+
+</br>
 
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
+<<<<<<< HEAD
 ### Table: 
 ```{r aggregated table, echo=FALSE, message= FALSE}
 source("~/Documents/INFO201/exploratory-analysis-jenineshafi/Aggregated Table.R")
@@ -78,6 +137,11 @@ kable(maternal_df, col.names =
 kable_styling(bootstrap_options = c("bordered", full_width = F))   
 
 ```
+=======
+In our analysis, we found that...
+
+### Table
+>>>>>>> origin/main
 
 Include a table of aggregate information
 
@@ -91,17 +155,49 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("chart1_example.R")}
 ```
 
-### Chart 2
+### Chart 2 : Risk Level Quantities
 
-Include a chart
+The bar graph counts how many inputs there are in each category per risk level. There are 272 cases of high risk, 336 cases of mid risk and 406 cases of low risk. This information is valuable as it tells us the varying states of risk level in the population they acquired the data from. This gives us insight on the diversity of the population as well as provide insight on potential correlations there are between other factors and an individual's risk level. This information can be analyzed and correct treatment based on these factors can be administered. It is a good way to obtain context. 
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
+#Loading in the data set
+maternal_risk <- read.csv("Maternal Health Risk Data Set (1).csv", stringsAsFactors = F)
+
+#Plotting how many inputs there were for each RiskLevel: low, mid, and high risk
+ggplot(maternal_risk, aes (x=RiskLevel))+ geom_bar()
+
+#Confirming numbers by referencing the dataset
+num_high_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "high risk") 
+
+num_mid_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "mid risk")
+
+num_low_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "low risk")
+
+```
+
+### Chart 3: Age Distribution within each Risk Level Group 
+
+``
+```
 
 Describe why you chose this chart and what information it reveals
 
-### Chart 3
+We chose to include this chart so that we could get a visual of what ages were 
+included in this study population and how the age ranges were distributed across 
+age groups. Using a box plot allows us to see the median age for each risk group,
+along with the maximum and minimum ages for each group. This chart reveals that
+the median age is highest among the high risk group followed by the mid risk 
+group then the low risk group. This reveals that older age might be associated 
+with higher maternal health risk in this population of Bangladeshi women. 
+Additionally, this chart reveals that the distribution of ages is similar
+between the low risk and mid risk groups. 
 
-Include a chart
 
-Describe why you chose this chart and what information it reveals
+
+

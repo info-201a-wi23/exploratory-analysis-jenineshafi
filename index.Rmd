@@ -128,14 +128,31 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("chart1_example.R")}
 ```
 
-### Chart 2
+### Chart 2 : Risk Level Quantities
 
-Include a chart
+The bar graph counts how many inputs there are in each category per risk level. There are 272 cases of high risk, 336 cases of mid risk and 406 cases of low risk. This information is valuable as it tells us the varying states of risk level in the population they acquired the data from. This gives us insight on the diversity of the population as well as provide insight on potential correlations there are between other factors and an individual's risk level. This information can be analyzed and correct treatment based on these factors can be administered. It is a good way to obtain context. 
 
-Describe why you chose this chart and what information it reveals
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
+#Loading in the data set
+maternal_risk <- read.csv("Maternal Health Risk Data Set (1).csv", stringsAsFactors = F)
+
+#Plotting how many inputs there were for each RiskLevel: low, mid, and high risk
+ggplot(maternal_risk, aes (x=RiskLevel))+ geom_bar()
+
+#Confirming numbers by referencing the dataset
+num_high_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "high risk") 
+
+num_mid_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "mid risk")
+
+num_low_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "low risk")
+
+```
 
 ### Chart 3: Age Distribution within each Risk Level Group 
 

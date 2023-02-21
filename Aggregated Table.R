@@ -9,7 +9,7 @@ library(kableExtra)
 # Load data
 maternal_risk <- read.csv("Maternal Health Risk Data Set (1).csv", stringsAsFactors = F)
 
-# Aggregate table focusing risk level correlation of age and health factors
+# Aggregate table focusing on risk level correlation of age and health factors
 
 maternal_df <- maternal_risk %>%
   select("RiskLevel", "Age", "BS", "HeartRate", "BodyTemp") %>%

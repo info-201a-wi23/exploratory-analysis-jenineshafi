@@ -16,19 +16,19 @@ maternal_df <- maternal_risk %>%
   group_by(RiskLevel) %>%
   summarize(min_Age = min(Age),
             max_Age = max(Age),
-            avg_age = mean(Age),
-            avg_BS = mean(BS),
-            avg_HeartRate = mean(HeartRate),
-            avg_BodyTemp = mean(BodyTemp)) %>%
+            avg_age = round(mean(Age), 1),
+            avg_BS = round(mean(BS), 1),
+            avg_HeartRate = round(mean(HeartRate), 0),
+            avg_BodyTemp = round(mean(BodyTemp), 1)) %>%
   arrange(factor(RiskLevel, levels = c("high risk", "mid risk", "low risk")))
 kable(maternal_df, col.names = 
         c('Risk Levels',
-          'Min Age',
-          'Max Age',
-          'Mean Age',
-          'Mean Blood Sugar',
-          'Mean Heart Rate',
-          "Mean Body Temp")) %>%
+          'Minimum Age (yrs)',
+          'Maximum Age (yrs)',
+          'Mean Age (yrs)',
+          'Mean Blood Sugar (mmol/L)',
+          'Mean Heart Rate (bpm)',
+          "Mean Body Temp (degrees F)")) %>%
   kable_styling(bootstrap_options = c("bordered", full_width = F))   
 
 

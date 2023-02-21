@@ -24,10 +24,9 @@ health; maternal health; maternal mortality; pregnancy; Bangladesh
 
 ### Introduction  
 
-> Women of reproductive age in developing countries of rural areas like Bangladesh lack access to adequate healthcare, maternal services, social and economic factors, ultimately putting their lives and health at risk from a wide range of potential complications during pregnancy. Understanding how to foresee perceived risks to pregnant women in Bangladesh is essential for enhancing maternal health outcomes and decreasing maternal mortality. Predicting the risks that women in Bangladesh face in regard to their maternal health allows providers to take measures to lessen the possibility of any difficulties developing. Maternal health risk data collection from various hospitals, community clinics, and maternal health cares through Internet of Things (IoT) have revealed health factors as possible indicators for maternal health risks. Constant vigilance during pregnancy is required to ensure a risk-free pregnancy and birth. Hence, IoT based healthcare systems can be used by providers to consistently monitor the health of the mother and fetus. How does blood glucose/gestational diabetes affect the overall maternal health?
-Pre-eclampsia and gestational diabetes, for instance, can be diagnosed by monitoring the mother’s vital signs, movements, and symptoms with IoT devices. Both maternal health risks and mortality occur under these circumstances and lead to maternal, fetal, and long-term health complications. Do the categories of maternal risk correlate with each other? What factors contribute to a “high-risk” profile? These challenges need to be addressed to improve maternal health outcomes of Bangladeshi women alongside efforts of providing access to prenatal services, education, and resources to those living in rural areas. 
+> Women of reproductive age in developing countries of rural areas like Bangladesh lack access to adequate healthcare, maternal services, social and economic factors, ultimately putting their lives and health at risk from a wide range of potential complications during pregnancy. Understanding how to foresee perceived risks to pregnant women in Bangladesh is essential for enhancing maternal health outcomes and decreasing maternal mortality. Predicting the risks that women in Bangladesh face in regard to their maternal health allows providers to take measures to lessen the possibility of any difficulties developing. Maternal health risk data collection from various hospitals, community clinics, and maternal health cares through Internet of Things (IoT) have revealed health factors as possible indicators for maternal health risks. Constant vigilance during pregnancy is required to ensure a risk-free pregnancy and birth. Hence, IoT based healthcare systems can be used by providers to consistently monitor the health of the mother and fetus. How are blood glucose levels distributed across risk levels in this population and how might this affect maternal and fetal health? Pre-eclampsia and gestational diabetes, for instance, can be diagnosed by monitoring the mother’s vital signs, movements, and symptoms with IoT devices. Both maternal health risks and mortality occur under these circumstances and lead to maternal, fetal, and long-term health complications. Taking into account different factors that may affect maternal health, what is the age distribution among different risk level groups in this population and does age correlate with risk? Additionally, what is the distribution of risk levels among this population and is high maternal risk a serious issue that should be addressed? These factors need to be considered in order to improve maternal health outcomes of Bangladeshi women alongside efforts of providing access to prenatal services, education, and resources to those living in rural areas. 
 
-</br> Adjust the research questions depending on our final graph 
+</br>
 
 ### Related Work  
 
@@ -109,23 +108,24 @@ What are possible limitations or problems with this data?
 </br>
 
 ### Summary Information
-Our findings reveal that 
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+Our findings reveal that the mean age, blood sugar level, heart rate, and body temperature is the highest among the high risk group compared to the mid and low risk groups. In particular, the mean blood sugar among the high risk group was 12.1 mmol/L, whereas the blood sugar levels among the mid risk group was 7.8 mmol/L and 7.2 mmol/L among the low risk group, potentially indicating that blood sugar level is a significant contributor to higher maternal risk. The mean age for the high risk group was 36.2 years, which was higher than the average of 28.4 years for the mid risk group and 26.9 years for the low risk group. Also, the largest difference among the minimum and maximum ages was 60 years among the low risk group comapred to 53 years in the high risk group and 50 years in the mid risk group. This may indicate that older age is associated with a higher risk. Additionally, regardless of risk level, the mean body temperature was considered healthy at 98.4 degrees Farenheit or above. Similarly, the mean heart rate among risk groups was relatively similar, ranging from 73 to 77 bpm.   
 
-In our analysis, we found that...
 ```{r, echo=FALSE, message=FALSE, code = readLines("Summary Information.R")}
 
 ```
 
-### Aggregate Table : 
+</br>
+
+### Aggregate Table 
+
+This table presents how average health factors and age can contribute to different risk levels. 
+
 ```{r, echo=FALSE, message=FALSE, code = readLines("Aggregated Table.R")}
 
 ```
 
-
-This table presents how average health factors and age can contribute to different risk levels
-
+</br>
 
 ### Chart 1 : Blood Glucose Levels across Risk Level Groups
 
@@ -133,16 +133,20 @@ This table presents how average health factors and age can contribute to differe
 
 ```
 
-In this plot, we are looking at Blood Glucose measured in mmol/L. This is a modified scatter plot where areas of higher trends of a certain glucose measurement will have a bigger point than others. We can see in our graph that high risk individuals tend to have blood glucose over 15. Low risk people are more concentrated at the 5-7 range while mid risk as some inidviduals in the lower range but also has a higher spread into the high glucose range. This information shows how glucose is represented in each risk group.
+In this plot, we are looking at Blood Glucose measured in mmol/L. This is a modified scatter plot where areas of higher trends of a certain glucose measurement will have a bigger point than others. We can see in our graph that high risk individuals tend to have blood glucose over 15. Low risk people are more concentrated at the 5-7 range while mid risk as some individuals in the lower range but also has a higher spread into the high glucose range. This information shows how glucose is represented in each risk group and may reveal a correlation between high maternal risk and high blood glucose levels during pregnancy. 
+
+</br>
 
 ### Chart 2 : Risk Level Quantities
-
-The bar graph counts how many inputs there are in each category per risk level. There are 272 cases of high risk, 336 cases of mid risk and 406 cases of low risk. This information is valuable as it tells us the varying states of risk level in the population they acquired the data from. This gives us insight on the diversity of the population as well as provide insight on potential correlations there are between other factors and an individual's risk level. This information can be analyzed and correct treatment based on these factors can be administered. It is a good way to obtain context. 
 
 
 ```{r, echo=FALSE, message=FALSE, code = readLines("chart2_num_per_risklevel.R")}
 
 ```
+
+The bar graph counts how many inputs there are in each category per risk level. There are 272 cases of high risk, 336 cases of mid risk and 406 cases of low risk. This information is valuable as it tells us the varying states of risk level in the population they acquired the data from. This gives us insight on the diversity of the population as well as provide insight on potential correlations there are between other factors and an individual's risk level. This information can be analyzed and correct treatment based on these factors can be administered. These findings also demonstrate that the majority of individuals in this study population are considered low or mid maternal risk, which is a good indicator for population health, yet the 272 cases of high risk may indicate a need for improved support and resources. 
+
+</br>
 
 ### Chart 3: Age Distribution within each Risk Level Group 
 
@@ -150,18 +154,4 @@ The bar graph counts how many inputs there are in each category per risk level. 
 
 ```
 
-Describe why you chose this chart and what information it reveals
-
-We chose to include this chart so that we could get a visual of what ages were 
-included in this study population and how the age ranges were distributed across 
-age groups. Using a box plot allows us to see the median age for each risk group,
-along with the maximum and minimum ages for each group. This chart reveals that
-the median age is highest among the high risk group followed by the mid risk 
-group then the low risk group. This reveals that older age might be associated 
-with higher maternal health risk in this population of Bangladeshi women. 
-Additionally, this chart reveals that the distribution of ages is similar
-between the low risk and mid risk groups. 
-
-
-
-
+This chart is included in order to get an understanding of how the age ranges were distributed across risk groups in this population and to explore is there is a potential correlation between age and risk level. Using a box plot allows us to see the median age for each risk group, along with the maximum and minimum ages for each group. This chart reveals that the median age is highest among the high risk group followed by the mid risk group then the low risk group. This reveals that older age might be associated with higher maternal health risk in this population of Bangladeshi women.  

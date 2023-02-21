@@ -22,7 +22,7 @@ tab <- table(df %>% group_by(Age, RiskLevel) %>%
 
 View(tab)
 
-summary_info <- list()
+summary_stats <- list()
 summary_info$num_rows <- nrow(maternal_risk)
 summary_info$max_Age <- maternal_risk %>% 
     filter(Age == max(Age, na.rm = TRUE))
@@ -30,13 +30,33 @@ summary_info$max_Age <- maternal_risk %>%
 tab <- table(summary_info)
 
 summary_info <- list()
-summary_info$num_rows <- nrow(maternal_risk)
+summary_info$min_Age <- maternal_risk %>% 
+  filter(Age == min(Age, na.rm = TRUE)) %>% 
+  select(Age)
 summary_info$max_Age <- maternal_risk %>% 
   filter(Age == max(Age, na.rm = TRUE)) %>% 
   select(Age)
 summary_info$avg_age <- maternal_risk %>% 
-  filter()
-summary_info$avg_BS <- 
-summary_info$avg_HeartRate <- 
+  select(Age) %>% 
+  summarize(mean = mean(Age))
+summary_info$avg_BS <- maternal_risk %>% 
+  select(BS) %>% 
+  summarize(mean = mean(BS))
+summary_info$avg_HeartRate <- maternal_risk %>% 
+  select(HeartRate) %>% 
+  summarize(mean = mean(HeartRate))
+summary_info$RiskLevel <- maternal_risk %>% 
+  select(RiskLevel) %>% 
+
+library("knitr")
+
+kable(summary_info,
+      col.names = c('Min Age',
+                   'Max Age',
+                   'Mean Age',
+                   'Blood Sugar', 
+                   'Heart Rate'))
+
+
 
 

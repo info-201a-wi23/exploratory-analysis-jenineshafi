@@ -139,10 +139,21 @@ Describe why you chose this chart and what information it reveals
 
 ### Chart 3: Age Distribution within each Risk Level Group 
 
-Include a chart
-
-
+``````{r, echo = FALSE, code = readLines("chart_3_age_risk.R")}
+```
 
 Describe why you chose this chart and what information it reveals
+
+We chose to include this chart so that we could get a visual of what ages were 
+included in this study population and how the age ranges were distributed across 
+age groups. Using a box plot allows us to see the median age for each risk group,
+along with the maximum and minimum ages for each group. This chart reveals that
+the median age is highest among the high risk group followed by the mid risk 
+group then the low risk group. This reveals that older age might be associated 
+with higher maternal health risk in this population of Bangladeshi women. 
+Additionally, this chart reveals that the distribution of ages is similar
+between the low risk and mid risk groups. 
+
+
 
 

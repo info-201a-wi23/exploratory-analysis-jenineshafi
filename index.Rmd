@@ -109,10 +109,15 @@ What are possible limitations or problems with this data?
 </br>
 
 ### Summary Information
+Our findings reveal that 
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-<<<<<<< HEAD
+In our analysis, we found that...
+```{r summary info, echo=FALSE, message=FALSE}
+source("~/Documents/INFO201/exploratory-analysis-jenineshafi/Summary Information.R")
+```
+
 ### Table: 
 ```{r aggregated table, echo=FALSE, message= FALSE}
 source("~/Documents/INFO201/exploratory-analysis-jenineshafi/Aggregated Table.R")
@@ -137,13 +142,8 @@ kable(maternal_df, col.names =
 kable_styling(bootstrap_options = c("bordered", full_width = F))   
 
 ```
-=======
-In our analysis, we found that...
 
-### Table
->>>>>>> origin/main
 
-Include a table of aggregate information
 
 Describe why you included the table and what information it reveals
 

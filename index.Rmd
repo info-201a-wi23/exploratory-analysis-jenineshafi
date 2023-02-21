@@ -156,7 +156,7 @@ num_low_risk<-maternal_risk %>% select(RiskLevel) %>% filter(RiskLevel == "low r
 
 ### Chart 3: Age Distribution within each Risk Level Group 
 
-``````{r, echo = FALSE, code = readLines("chart_3_age_risk.R")}
+``
 ```
 
 Describe why you chose this chart and what information it reveals

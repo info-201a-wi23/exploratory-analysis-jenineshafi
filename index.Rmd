@@ -124,8 +124,8 @@ In our analysis, we found that...
 ```
 
 
+This table presents how average health factors and age can contribute to different risk levels
 
-Describe why you included the table and what information it reveals
 
 ### Chart 1 : Blood Glucose Levels across Risk Level Groups
 
